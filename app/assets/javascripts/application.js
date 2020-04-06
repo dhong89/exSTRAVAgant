@@ -12,4 +12,6 @@
 //
 //= require rails-ujs
 //= require activestorage
+//= jquery
+//= jquery_ujs
 //= require_tree .

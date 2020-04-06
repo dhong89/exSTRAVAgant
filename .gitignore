@@ -25,3 +25,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# We want to generate our own bundle not use any pre-existing bundles
+node_modules/
+bundle.js
+bundle.js.map

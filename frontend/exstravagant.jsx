@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {signup, login, logout} from './util/session';
+import {signUp, login, logout} from './util/session';
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    window.signup = signup;
+    window.signUp = signUp;
     window.login = login;
     window.logout = logout;
 

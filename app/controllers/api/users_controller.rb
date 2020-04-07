@@ -14,6 +14,6 @@ skip_before_action :verify_authenticity_token
 
 
     def users_params 
-        params.require(:user).permit(:username, :password)
+        params.require(:user).permit(:username, :email, :first_name, :last_name, :password)
     end
 end

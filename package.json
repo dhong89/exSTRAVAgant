@@ -8,9 +8,12 @@
     "babel-loader": "^8.1.0",
     "dom": "0.0.3",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
@@ -22,7 +25,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
   },
   "repository": {
     "type": "git",
@@ -34,5 +39,9 @@
   "bugs": {
     "url": "https://github.com/dhong89/exSTRAVAgant/issues"
   },
-  "homepage": "https://github.com/dhong89/exSTRAVAgant#readme"
+  "homepage": "https://github.com/dhong89/exSTRAVAgant#readme",
+  "engines": {
+    "node": "13.10.1",
+    "npm": "6.13.7"
+  }
 }

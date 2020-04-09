@@ -1,0 +1,137 @@
+.header{
+    display: flex;
+    border-bottom: whitesmoke 1px solid;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    
+}
+
+.main-logo{
+    padding-left: 150px;
+    padding-right: 450px;
+}
+
+.buttons-container{
+    padding-bottom: 10px;
+}
+
+.sign-up-container{
+    border: solid lightgray .5px;
+    width: 200px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    font-size: xx-small;
+
+}
+.signup-btn{
+    display: inline-flex;
+    padding-right: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7.3px;
+}
+
+.signup-btn a {
+    color: black;
+}
+
+
+.email-logo{
+    display: inline-flex;
+    max-width: 10px;
+    max-height: 10px;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+ .login-button{
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    padding: 0 10px 10px 10px;
+    width: 25px;
+    height: 5px;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+ }
+
+ .login-button a {
+     color: black
+ }
+
+ .login-signin{
+     display: inline-block;
+}
+
+.main-container{
+    font-family: 'Ramabhadra', sans-serif;
+    text-align: center;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    
+
+}
+    
+.homepage-logo{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    padding-bottom: 50px;
+        
+}
+
+.buttons-container {
+    padding:30px 0px 30px 0px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.demo-user-btn{
+    border: solid lightgray .5px;
+    width: 200px;
+    line-height: 31px;
+    display: block;
+    text-align: center;
+    font-size: 7px;
+    font-family: Arial, Helvetica, sans-serif3;
+
+}
+    
+.demo-user-btn a {
+    color: black;
+}
+
+
+.terms-conditions{
+    display: flex;
+    width: 193px;
+    text-align: center;
+    font-size: 5.5px;
+    justify-content: center;
+}
+
+.login-redirect{
+    display: flex;
+    width: 193px;
+    text-align: center;
+    font-size: 5.5px;
+    justify-content: center;
+}
+
+.footer{
+    display: flex;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+    color: white;
+    font-size: 10px;
+    text-align: justify;
+    padding-left: 50px;
+    padding-top: 20px;
+    font-family: 'Ramabhadra', sans-serif;
+}

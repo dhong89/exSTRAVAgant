@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>ExSTRAVAgant</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'application' , media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <script type='text/javascript'>
+      window.logo = "<%= image_url('homepage_logo.png') %>";
+      window.email = "<%= image_url('email.png') %>";
+    </script>
+
+    <script 
+      src="https://kit.fontawesome.com/4e16ab7eb3.js" crossorigin="anonymous">
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+
   </head>
 
   <body>

@@ -1,11 +1,11 @@
 import {connect} from 'react-redux';
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { signUp } from '../../actions/session_actions';
+import { signUp, resetErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
 
-const mSTP = (state) => ({
+const mSTP = ({ errors }) => ({
     user: {
         username: '',
         password: '',
@@ -14,12 +14,14 @@ const mSTP = (state) => ({
         password: '',
         email: ''
     },
+    errors: errors.session,
     formType: 'Create Account',
     navLink: <Link to="/login">log in</Link>
 })
 
 const mDTP = dispatch => ({
         processForm: (user) => dispatch(signUp(user)),
+        resetErrors: () => dispatch(resetErrors())
 });
 
 

@@ -1,0 +1,162 @@
+.outer-container{
+    display: block;
+    background-image: image-url("signup_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    object-position: 100px 100px;
+}
+
+ .signup-button {
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    padding: 0 10px 10px 10px;
+    width: 23px;
+    height: 4px;
+    font-size: 6px;
+    font-weight: bold;
+    text-align: center;
+    background-color:rgb(223, 72, 0);
+}
+
+.signup-button a {
+    color: white;
+
+}
+
+
+
+.main-body{
+    display: block;
+    align-items: center;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.signup-message{
+    font-family: 'Ramabhadra', sans-serif;
+    display: block;
+    background-color: black;
+    color: white;
+    opacity: 1;
+    height: 60px;
+    
+}
+
+.signup-form{
+    display: block;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.username-form{
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    border-radius: 2px;
+    height: 15px;
+    outline:none;
+   
+
+}
+
+.username-form:focus{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+
+
+.password-form{
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    border-radius: 2px;
+    height: 15px;
+    outline:none;
+
+}
+
+.password-form:focus{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+
+.first-name-form{
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    border-radius: 2px;
+    height: 15px;
+    outline:none;
+
+}
+
+.first-name-form:focus{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+.last-name-form{
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    border-radius: 2px;
+    height: 15px;
+    outline:none;
+
+}
+
+.last-name-form:focus{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+
+.email-form{
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    border-radius: 2px;
+    height: 15px;
+    outline:none;
+
+}
+
+.email-form:focus{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+
+
+.session-submit{
+    background-color:rgb(255, 72, 0);
+    width: 120px;
+    height: 20px;
+    border-radius: 2px;
+    border: none black .5px;
+    font-weight: bold;
+    color: white;
+    font-size: 7px;
+    outline:none;
+}
+
+.session-submit:hover{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+// .error-messages-2 ul{
+// }
+
+.error-messages-2 li{
+    padding-left: 20px;
+    text-align: center;
+    display: flex;
+    font-family: 'Ramabhadra', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: red;
+    font-size: 5px;
+    list-style-type: circle
+}

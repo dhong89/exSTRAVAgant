@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
-    constructor(props){
-        // debugger    
+    constructor(props){   
         super(props);
         this.state = this.props.user
 
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.resetErrors();
     }
 
     update(field) {
@@ -24,11 +27,25 @@ class SessionForm extends React.Component {
 
     signup(){
         if (this.props.formType === 'Create Account'){
-            return <h1>Join Strava today, it's Free.</h1> 
+            return <h1>Join Strava today, it's Free!</h1> 
         } else {
             return <h1>Log In</h1> 
         }
     }
+
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
+
 
     render () {
         const signinPage = () => (
@@ -47,12 +64,17 @@ class SessionForm extends React.Component {
 
                 </header>
 
+
                 <div className='container'>
                     <div className="divider" /> 
                     
                     <div className='main-body'>
                         <div className='login-message'>
                             {this.signup()}
+                        </div>
+
+                        <div className="error-messages-1">
+                        {this.renderErrors()}
                         </div>
 
 
@@ -94,7 +116,7 @@ class SessionForm extends React.Component {
         
         const signupPage = () => (
             <div className="signup-form-container">
-                
+            
                 <header className='header'>
 
                     <div className='main-logo-div'>
@@ -108,15 +130,27 @@ class SessionForm extends React.Component {
 
                 </header>
 
-                <div className='top-container'>
+
+
+                <div className='outer-container'>
+                    <div className="divider" /> 
+
+                <div className='main-body'> 
+
+                <div className='signup-message'>
                     {this.signup()}
                 </div>
-             
 
-                <form onSubmit={this.handleSubmit}>
-                    <label>Username:
+                <div className='error-messages-2'>
+                    {this.renderErrors()}
+                </div>
+
+                <form className='signup-form' onSubmit={this.handleSubmit}>
+                    <label>
                         <input
+                            className='username-form'
                             type="text"
+                            placeholder="username" 
                             value={this.state.username}
                             onChange={this.update('username')}
                         />
@@ -124,8 +158,11 @@ class SessionForm extends React.Component {
                     
                     <br/>
 
-                    <label>Password:
-                        <input type="password"
+                    <label>
+                        <input 
+                            className='password-form'
+                            type="password"
+                            placeholder="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                         />
@@ -133,9 +170,11 @@ class SessionForm extends React.Component {
 
                     <br />
 
-                    <label>Firstname:
+                    <label>
                         <input
+                            className='first-name-form'
                             type="text"
+                            placeholder="first name"
                             value={this.state.first_name}
                             onChange={this.update('first_name')}
                         />
@@ -143,9 +182,11 @@ class SessionForm extends React.Component {
                     
                     <br />
 
-                    <label>Lastname:
+                    <label>
                         <input
+                            className='last-name-form'
                             type="text"
+                            placeholder="last name"
                             value={this.state.last_name}
                             onChange={this.update('last_name')}
                         />
@@ -153,9 +194,11 @@ class SessionForm extends React.Component {
 
                     <br />
 
-                    <label>Email:
+                    <label>
                         <input
+                            className='email-form'
                             type="text"
+                            placeholder="email"
                             value={this.state.email}
                             onChange={this.update('email')}
                         />
@@ -165,6 +208,11 @@ class SessionForm extends React.Component {
 
                     <input className="session-submit" type="submit" value={this.props.formType} />
                 </form>
+
+            
+                    </div>
+
+            </div>
             </div>
         );
 

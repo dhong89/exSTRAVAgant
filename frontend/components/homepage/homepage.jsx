@@ -15,7 +15,16 @@ class HomePage extends React.Component {
             username: 'demo_user',
             password: 'password123'
         }
-        this.props.processForm(user);
+
+        if (e.currentTarget.innerHTML === "Use Demo User"){
+            const demoUser = {
+                username: 'demo_user',
+                password: 'password123'
+            }
+            return this.props.processForm(demoUser)
+        } else {
+            this.props.processForm(user);
+        }
     }
 
     render () {
@@ -53,7 +62,7 @@ class HomePage extends React.Component {
                 <div className='buttons-container'>
                 
                     <div className='demo-user-btn'>
-                            <Link  to="/login">Using Demo User</Link>
+                            <Link  to="/login">Use Demo User</Link>
                     </div>
 
                         <div className="divider" /> 

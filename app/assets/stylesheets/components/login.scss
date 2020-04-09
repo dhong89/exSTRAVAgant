@@ -104,3 +104,14 @@
 .session-submit:hover{
     box-shadow: 0 0 5px rgb(221, 227, 228);
 }
+
+.error-messages-1 li{
+    padding-left: 20px;
+    text-align: center;
+    display: flex;
+    font-family: 'Ramabhadra', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: red;
+    font-size: 5px;
+    list-style-type: circle
+}

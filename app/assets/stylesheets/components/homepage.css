@@ -9,7 +9,12 @@
 .main-logo{
     padding-left: 150px;
     padding-right: 450px;
+    width: 50px;
 }
+
+/* .main-logo-div-white{
+    display
+} */
 
 .buttons-container{
     padding-bottom: 10px;
@@ -131,7 +136,7 @@
     color: white;
     font-size: 10px;
     text-align: justify;
-    padding-left: 50px;
+    /* padding-left: 5x; */
     padding-top: 20px;
     font-family: 'Ramabhadra', sans-serif;
 }

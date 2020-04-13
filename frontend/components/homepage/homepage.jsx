@@ -35,7 +35,7 @@ class HomePage extends React.Component {
             <header className='header'>
 
                 <div className='main-logo-div'>
-                    <img className='main-logo' src='' alt="main-logo" />
+                    <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                 </div>
                 
                 <div className="login-button">
@@ -94,7 +94,9 @@ class HomePage extends React.Component {
 
             <div className="footer">
 
-                <h1>exSTRAVAgant</h1>
+                    <div className='main-logo-div-white'>
+                        <img className='main-logo' src={window.main_logo_white} alt="main-logo" />
+                    </div>
 
             </div>
 

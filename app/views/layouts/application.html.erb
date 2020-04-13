@@ -5,15 +5,21 @@
     <title>ExSTRAVAgant</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application' , media: 'all' %>
     <%= javascript_include_tag 'application' %>
+<<<<<<< HEAD
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
 
     
+=======
+    
+   
+>>>>>>> routes
     <script type='text/javascript'>
       window.logo = "<%= image_url('homepage_logo.png') %>";
       window.email = "<%= image_url('email.png') %>";
+      window.main_logo_orange = "<%= image_url('main_logo_orange') %>"
+      window.main_logo_white = "<%= image_url('main_logo_white') %>"
     </script>
 
     <script 

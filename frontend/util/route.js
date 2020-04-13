@@ -1,8 +1,28 @@
-export const fetchRoutes = (routes) => (
+export const fetchRoutes = () => (
     $.ajax({
         url: '/api/routes',
         method: 'GET',
-        data: {routes: routes}
+    })
+)
 
+export const fetchRoute = (routeId) => (
+    $.ajax({
+        url: `/api/routes/${routeId}`,
+        method: 'GET',
+    })
+)
+
+export const createRoute = (route) => (
+    $.ajax({
+        url:'/api/routes',
+        method: 'POST',
+        data: {route: route}
+    })
+) //// Was not working on console.
+
+export const deleteRoute = (routeId) => (
+    $.ajax({
+        url: `/api/routes/${routeId}`,
+        method: 'DELETE'
     })
 )

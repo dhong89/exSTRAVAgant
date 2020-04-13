@@ -1,4 +1,4 @@
-class API::ROutesController < ApplicationController
+class Api::RoutesController < ApplicationController
 
     def index
         @routes = Route.all.where(athlete_id: current_user.id)
@@ -24,12 +24,12 @@ class API::ROutesController < ApplicationController
 
 
     def destroy
-        @route = Route.find_by(route_name: route_name, athlete_id: athlete_id)
+        @route = Route.find(params[:id])
         
         if @route   
             @route.destroy
         else
-            render json:['This route does not exists'], status: 422
+            render json:['This route does not exist'], status: 422
         end
     end
 

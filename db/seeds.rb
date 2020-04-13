@@ -11,22 +11,10 @@ User.delete_all
 Route.delete_all
 
 
-# username: 'demo_user',
-# email: 'demo_user@gmail.com',
-# first_name: 'demo',
-# last_name: 'user',
-# password: 'password123'
-
-# route_name:, 
-# distance:, 
-# elevation:, 
-# coordinates:, 
-# estimated_move_time:, 
-# athlete_id:, 
-# transportation:
 
 
 u1 = User.create!(
+    id: 1,
     username: 'guest',
     email: 'guest@gmail.com',
     first_name: 'guest',
@@ -35,6 +23,7 @@ u1 = User.create!(
 )
 
 u2 = User.create!(
+    id: 2,
     username: 'test',
     email: 'test@gmail.com',
     first_name: 'test',
@@ -43,6 +32,7 @@ u2 = User.create!(
 )
 
 u3 = User.create!(
+    id: 3,
     username: 'demo_user',
     email: 'demo_user@gmail.com',
     first_name: 'demo',
@@ -56,9 +46,9 @@ Route.create!(
     route_name: 'short run',
     distance: 3.14,
     elevation: 300,
-    coordinates: [long: 40.8509, lat: 73.9701],
+    coordinates: '40.8509, 73.9701',
     estimated_move_time: '0:23',
-    athlete_id: u1,
+    athlete_id: u1.id,
     transportation: 'RUNNING'
 )
 
@@ -66,19 +56,29 @@ Route.create!(
     route_name: 'long run',
     distance: 9.2,
     elevation: 230,
-    coordinates: [long: 40.8215, lat: 73.9876],
+    coordinates: '40.8215, 73.9876',
     estimated_move_time: '1:23',
-    athlete_id: u2,
+    athlete_id: u2.id,
     transportation: 'RUNNING'
 )
 
+Route.create!(
+    route_name: 'boring run',
+    distance: 7.2,
+    elevation: 180,
+    coordinates: '40.8215, 73.9876',
+    estimated_move_time: '1:23',
+    athlete_id: u2.id,
+    transportation: 'RUNNING'
+)
 
 Route.create!(
     route_name: 'fun run',
     distance: 5.14,
     elevation: 150,
-    coordinates: [long: 40.8343, lat: 74.0088],
+    coordinates: '40.8343, 74.0088',
     estimated_move_time: '0:33',
-    athlete_id: u3,
+    athlete_id: u3.id,
     transportation: 'RUNNING'
 )
+

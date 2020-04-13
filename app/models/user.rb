@@ -6,6 +6,12 @@ validates :password, length: {minimum: 6 }, allow_nil: true
 after_initialize :ensure_session_token
 attr_reader :password
 
+    has_many :routes,
+    primary_key: :id,
+    foreign_key: :athlete_id,
+    class_name: :Route
+
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user && user.is_password?(password)

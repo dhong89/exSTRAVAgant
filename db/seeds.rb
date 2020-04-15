@@ -82,3 +82,54 @@ Route.create!(
     transportation: 'RUNNING'
 )
 
+
+Workout.create!(
+    workout_name: 'Morning Walk',
+    date: Date.new(2020, 4, 1),
+    time:  Time.now,
+    sport: 'RUNNING',
+    title: 'Morning Walk',
+    distance: '3.5', 
+    user_id: u1.id
+)
+
+Workout.create!(
+    workout_name: 'Morning Run',
+    date: Date.new(2020, 4, 2),
+    time:  Time.now,
+    sport: 'RUNNING',
+    title: 'Morning Run',
+    distance: '7.8', 
+    user_id: u1.id
+)
+Workout.create!(    
+    workout_name: 'Morning Walk',
+    date: Date.new(2020, 4, 1),
+    time:  Time.now,
+    sport: 'RUNNING',
+    title: 'Morning Walk',
+    distance: '3.5', 
+    user_id: u2.id
+)
+
+Workout.create!(
+    workout_name: 'Afternoon Walk',
+    date: Date.new(2020, 4, 1),
+    time:  Time.now,
+    sport: 'RUNNING',
+    title: 'Morning Walk',
+    distance: '2.3', 
+    user_id: u3.id
+)
+
+Workout.create!(
+    workout_name: 'Evening Run',
+    date: Date.new(2020, 4, 1),
+    time:  Time.now,
+    sport: 'RUNNING',
+    title: 'Morning Walk',
+    distance: '5.7', 
+    user_id: u3.id
+)
+
+

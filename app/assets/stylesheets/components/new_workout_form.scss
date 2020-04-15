@@ -1,0 +1,114 @@
+.first-section{
+    font-family: 'Work Sans', sans-serif;
+    display: inline-flex;
+    font-weight: 30px;
+    font-size: 12px;
+    justify-content: space-between;
+    width: 47%;
+}
+
+.duration-flex{
+    display: inline-flex;
+}
+
+.second-section{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 30px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+}
+
+.place-holders{
+    width: 100px;
+    text-align: center;
+}
+
+hr{
+    margin: 30px 0;
+    border: none;
+    border-top: 1px solid #ccccd1;
+}
+
+.workout-input{
+    height: 23px;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.workout-input-sport {
+    height: 23px;
+    width: 240px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.place-holders{
+    height: 23px;
+    width: 120px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.duration-hour{
+    margin-top: 10px;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+    display: inline-flex;
+}
+
+.duration-min{
+    margin-top: 10px;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+}
+
+.duration-sec{
+    margin-top: 10px;
+    height: 20px;
+    width: 60px;
+    text-align: center;
+}
+
+
+.workout-btn-save{
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 5px;
+    border: solid lightgray .5px;
+    padding: 0px 25px 25px 17px;
+    width: 70px;
+    height: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    background-color:rgb(223, 72, 0);
+}
+
+
+.description-text {
+    width: 500px;
+    height: 100px;
+    margin-bottom: 50px;
+    
+}
+
+
+.form-container{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 30px;
+    font-size: 12px;
+    padding-left: 305px;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    // height: 500px;
+    // overflow: hidden;
+    display: block;
+
+}

@@ -62,7 +62,7 @@ class HomePage extends React.Component {
                 <div className='buttons-container'>
                 
                     <div className='demo-user-btn'>
-                            <Link  to="/login">Use Demo User</Link>
+                            <Link  to="/login">Sign in using a Demo User</Link>
                     </div>
 
                         <div className="divider" /> 
@@ -71,14 +71,13 @@ class HomePage extends React.Component {
                         <img className='email-logo' src={window.email} alt="email" />
 
                          <div className='signup-btn'>
-                             <Link to="/signup">Use my Email</Link>
+                             <Link to="/signup">Sign up using email</Link>
                         </div>
                     </div>
                             <div className="divider" /> 
 
                         <p className='terms-conditions'>
-                            By signing up for Strava, you agree to the  <a href="">Terms of Service.</a> 
-                             View our <a href="">Privacy Policy.</a>  
+                            By signing up for Strava, you agree to the Terms of Service. View our Privacy Policy. 
                         </p>
 
 

@@ -81,7 +81,7 @@ class NewWorkoutForm extends React.Component{
                 description: this.state.description,
                 distance: this.state.distance,
                 user_id: this.props.session.id
-            }).then(res => this.props.history.push({ path: "/workouts" }));
+            }).then( (result) => this.props.history.push({ path: "/workouts" }));
     }
 
     render () {

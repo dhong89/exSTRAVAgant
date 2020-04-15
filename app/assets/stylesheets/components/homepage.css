@@ -6,8 +6,12 @@
     
 }
 
+.main-logo-div{
+    padding-left: 45px;
+}
+
 .main-logo{
-    padding-left: 150px;
+    padding-left: 350px;
     padding-right: 450px;
     width: 50px;
 }
@@ -22,8 +26,8 @@
 
 .sign-up-container{
     border: solid lightgray .5px;
-    width: 200px;
-    line-height: 30px;
+    width: 360px;
+    line-height: 54px;
     display: block;
     text-align: center;
     font-size: xx-small;
@@ -33,7 +37,7 @@
     display: inline-flex;
     padding-right: 65px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 7.3px;
+    font-size: 12px;
 }
 
 .signup-btn a {
@@ -54,11 +58,12 @@
     border-radius: 2px;
     border: solid lightgray .5px;
     padding: 0 10px 10px 10px;
-    width: 25px;
-    height: 5px;
-    font-size: 8px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
+    margin-left: 800px;
  }
 
  .login-button a {
@@ -71,6 +76,7 @@
 
 .main-container{
     font-family: 'Ramabhadra', sans-serif;
+    font-size: 50px;
     text-align: center;
     margin: auto;
     padding: 50px 0px 50px 0px;
@@ -80,14 +86,14 @@
     
 .homepage-logo{
     display: inline-block;
-    width: 200px;
-    height: 200px;
-    padding-bottom: 50px;
+    width: 500px;
+    height: 500px;
+    padding-bottom: 80px;
         
 }
 
 .buttons-container {
-    padding:30px 0px 30px 0px;
+    padding:200px 0px 80px 50px;
 }
 
 .divider{
@@ -98,11 +104,11 @@
 
 .demo-user-btn{
     border: solid lightgray .5px;
-    width: 200px;
-    line-height: 31px;
+    width: 360px;
+    line-height: 54px;
     display: block;
     text-align: center;
-    font-size: 7px;
+    font-size: 12px;
     font-family: Arial, Helvetica, sans-serif3;
 
 }
@@ -114,29 +120,30 @@
 
 .terms-conditions{
     display: flex;
-    width: 193px;
+    width: 290px;
     text-align: center;
-    font-size: 5.5px;
-    justify-content: center;
+    font-size: 13px;
+    justify-content: left;
+    padding-left: 16px;
 }
 
 .login-redirect{
     display: flex;
-    width: 193px;
+    width: 340px;
     text-align: center;
-    font-size: 5.5px;
+    font-size: 13px;
     justify-content: center;
 }
 
 .footer{
     display: flex;
-    background-color: black;
-    height: 80px;
+    background-color: rgb(36,36,40);
+    height: 100px;
     width: 100%;
     color: white;
     font-size: 10px;
     text-align: justify;
     /* padding-left: 5x; */
-    padding-top: 20px;
+    padding-top: 40px;
     font-family: 'Ramabhadra', sans-serif;
 }

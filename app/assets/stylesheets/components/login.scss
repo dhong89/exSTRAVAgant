@@ -3,36 +3,44 @@
     background-image: image-url("login_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 900px;
     object-position:50% 50%;
 }
 
- .signup-button {
-    font-family: 'Ramabhadra', sans-serif;
-    border-radius: 2px;
-    border: solid lightgray .5px;
-    padding: 0 10px 10px 10px;
-    width: 23px;
-    height: 4px;
-    font-size: 6px;
-    font-weight: bold;
-    text-align: center;
-    background-color:rgb(223, 72, 0);
+.main-logo-div{
+    padding-right: 850px;
 }
 
-.signup-button a {
+ .signup-button-login {
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 4px;
+    border: solid lightgray .5px;
+    padding: 3px 10px 3px 17px;
+    width: 50px;
+    height: 25px;
+    font-size: 11px;
+    
+
+    background-color:rgb(228, 77, 14);
+}
+
+.signup-button-login a {
+
     color: white;
 
 }
 
 
 
-.main-body{
+.login-container{
     display: block;
     align-items: center;
     width: 180px;
     margin: 0 auto;
     text-align: center;
+    padding-right: 350px;
+    height: 100px;
+    padding-top: 50px;
 }
 
 .login-message{
@@ -42,6 +50,10 @@
     color: white;
     opacity: 1;
     height: 30px;
+    width: 400px;
+    height: 70px;
+    margin-left: 50px;
+    font-size: 32px;
     
 }
 
@@ -51,6 +63,9 @@
     background: rgba(0, 0, 0, 0.7);
     padding-bottom: 20px;
     padding-top: 30px;
+    width: 400px;
+    height: 350px;
+    margin-left: 50px;
 }
 
 .divider{
@@ -65,6 +80,7 @@
     border-radius: 2px;
     height: 15px;
     outline:none;
+    color: white;
    
 
 }
@@ -81,6 +97,7 @@
     border-radius: 2px;
     height: 15px;
     outline:none;
+    color: white;
 
 }
 

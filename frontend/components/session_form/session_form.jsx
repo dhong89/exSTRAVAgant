@@ -54,10 +54,10 @@ class SessionForm extends React.Component {
                 <header className='header'>
 
                     <div className='main-logo-div'>
-                        <img className='main-logo' src='' alt="main-logo" />
+                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                     </div>
 
-                    <div className="signup-button">
+                    <div className="signup-button-login">
                         <Link to="/signup">Sign Up</Link>
                     </div>
 
@@ -68,44 +68,47 @@ class SessionForm extends React.Component {
                 <div className='container'>
                     <div className="divider" /> 
                     
-                    <div className='main-body'>
-                        <div className='login-message'>
-                            {this.signup()}
+                    <div className='main-body-login'>
+
+                        <div className='login-container'>
+                            <div className='login-message'>
+                                {this.signup()}
+                            </div>
+
+                            <div className="error-messages-1">
+                            {this.renderErrors()}
+                            </div>
+
+
+                            <form className='login-form' onSubmit={this.handleSubmit}>
+
+                                <label>
+                                <input  
+                                    className='username-form'
+                                    type="text" 
+                                    placeholder="username" 
+                                    onChange={this.update('username')}
+                                    />
+                                </label>
+
+                                <br/>
+                                <br/>
+
+                                <label>
+                                    <input
+                                        className='password-form'
+                                        type="password"
+                                        placeholder="password"
+                                        onChange={this.update('password')}
+                                    />
+                                </label>
+
+                                <br/>
+                                <br/>
+        
+                                <input className="session-submit" type="submit" value='Log In' />
+                            </form>
                         </div>
-
-                        <div className="error-messages-1">
-                        {this.renderErrors()}
-                        </div>
-
-
-                        <form className='login-form' onSubmit={this.handleSubmit}>
-
-                            <label>
-                            <input  
-                                className='username-form'
-                                type="text" 
-                                placeholder="username" 
-                                onChange={this.update('username')}
-                                />
-                            </label>
-
-                            <br/>
-                            <br/>
-
-                            <label>
-                                <input
-                                    className='password-form'
-                                    type="password"
-                                    placeholder="password"
-                                    onChange={this.update('password')}
-                                />
-                            </label>
-
-                            <br/>
-                            <br/>
-    
-                            <input className="session-submit" type="submit" value='Log In' />
-                        </form>
                     </div>
                 </div>
             </div>
@@ -119,8 +122,8 @@ class SessionForm extends React.Component {
             
                 <header className='header'>
 
-                    <div className='main-logo-div'>
-                        <img className='main-logo' src='' alt="main-logo" />
+                    <div className='main-logo-div-signup'>
+                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                     </div>
 
                     <div className="login-button">

@@ -41,4 +41,9 @@ export const deleteRoute = (routeId) => dispatch => {
         .then( () => dispatch(removeRoute(routeId)))
 }
 
+export const fetchUserRoutes = () => dispatch => {
+    APIUtil.fetchUserRoutes()
+        .then((routes) => dispatch(receiveAllRoutes(routes)))
+}
+
 

@@ -1,7 +1,17 @@
 class Api::RoutesController < ApplicationController
 
     def index
-        @routes = Route.all.where(athlete_id: current_user.id)
+        # @routes = Route.all.where(athlete_id: current_user.id)
+        # @routes = current_user.routes
+
+        if params[:current_user_route]
+           
+            @routes = current_user.routes
+        else
+           
+            @routes = Route.all
+        end
+        
         render :index
     end
 

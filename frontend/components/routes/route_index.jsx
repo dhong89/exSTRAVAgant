@@ -9,7 +9,7 @@ class RouteIndex extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchRoutes();
+        this.props.fetchUserRoutes();
     }
 
 

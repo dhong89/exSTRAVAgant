@@ -6,7 +6,7 @@ import SignupFormContainer from './components/session_form/signup_form_container
 import RouteIndexContainer from './components/routes/route_index_container'; 
 import RouteShowContainer from './components/routes/route_show_container'; 
 import { AuthRoute, ProtectedRoute} from './util/route_util';
-import DashBoard from './components/dashboard/dashboard'; ////need to import the container
+import DashBoardContainer from './components/dashboard/dashboard_container'; 
 import MapContainer from './components/maps/map_container';
 import WorkoutIndexContainer from './components/workouts/workout_index_container';
 import NewWorkoutContainer from './components/new_workouts_form/new_workout_form_container';
@@ -18,7 +18,7 @@ const App = () => (
         <AuthRoute exact path='/' component={HomePageContainer} />
         <AuthRoute path="/login" component={LoginFormContainer} />
         <AuthRoute path="/signup" component={SignupFormContainer} />
-        <ProtectedRoute path='/dashboard' component={DashBoard} />
+        <ProtectedRoute path='/dashboard' component={DashBoardContainer} />
         <ProtectedRoute path='/routes' component={RouteIndexContainer} /> 
         <ProtectedRoute path='/routes/show' component={RouteShowContainer} /> 
         <ProtectedRoute exact path='/workouts' component={WorkoutIndexContainer} /> 

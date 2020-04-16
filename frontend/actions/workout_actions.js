@@ -22,26 +22,28 @@ export const removeWorkout = (workoutId) => ({
 
 
 export const fetchWorkouts = () => dispatch => {
-    APIUtil.fetchWorkouts()
+    return APIUtil.fetchWorkouts()
         .then( (workouts) => dispatch(receiveAllWorkouts(workouts)))
 }
 
 export const fetchWorkout = (workoutId) => dispatch => {
-    APIUtil.fetchWorkout(workoutId)
+    return APIUtil.fetchWorkout(workoutId)
         .then( (workout) => dispatch(receiveWorkout(workout)))
 }
 
 export const createWorkout = (workout) => dispatch => {
-    APIUtil.createWorkout(workout)
-        .then( (workout) => dispatch(receiveWorkout(workout)))
+    return APIUtil.createWorkout(workout)
+            .then( (workout) => {
+                return dispatch(receiveWorkout(workout))
+            })
 }
 
 export const updateWorkout = (workout) => dispatch => {
-    APIUtil.updateWorkout(workout)
+    return APIUtil.updateWorkout(workout)
         .then( (workout) => dispatch(fetchWorkout(workout)))
 }
 
 export const deleteWorkout = (workoutId) => dispatch => {
-    APIUtil.deleteWorkout(workoutId)
+    return APIUtil.deleteWorkout(workoutId)
         .then( () => dispatch(removeWorkout(workoutId)))
 }

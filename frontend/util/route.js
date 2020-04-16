@@ -26,3 +26,11 @@ export const deleteRoute = (routeId) => (
         method: 'DELETE'
     })
 )
+
+export const fetchUserRoutes = () => (
+    $.ajax({
+        url: '/api/routes',
+        method: 'GET',
+        data: {current_user_route: true}
+    })
+)

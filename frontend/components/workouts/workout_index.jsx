@@ -8,7 +8,6 @@ class WorkoutIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger;
         this.props.fetchWorkouts();
     }
 
@@ -29,7 +28,7 @@ class WorkoutIndex extends React.Component {
         return (
             <div>
                 <div className='navbar'>
-                    <div className='main-logo-div'>
+                    <div className='main-logo-div-workout'>
                         <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                     </div>
 

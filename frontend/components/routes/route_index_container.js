@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import RouteIndex from './route_index';
-import { fetchRoutes, deleteRoute } from '../../actions/route_actions';
+import { fetchUserRoutes, fetchRoutes, deleteRoute } from '../../actions/route_actions';
 
 
 export const mSTP = state => ({
@@ -8,7 +8,7 @@ export const mSTP = state => ({
 })
 
 export const mDTP = dispatch => ({
-    fetchRoutes: () => dispatch(fetchRoutes()),
+    fetchUserRoutes: () => dispatch(fetchUserRoutes()),
     deleteRoute: routeId => dispatch(deleteRoute(routeId))
 })
 

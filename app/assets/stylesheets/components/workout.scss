@@ -23,8 +23,8 @@
     font-weight: bold;
     text-align: center;
     background-color: rgb(245,245,250);
-     white-space: nowrap;
-     color:black
+    white-space: nowrap;
+    color:black
 }
 
 .navbar{
@@ -70,6 +70,7 @@
     font-weight: bold;
     text-align: center;
     background-color:rgb(223, 72, 0);
+    margin-top: 60px;
 }
 
 .workout-nav a {
@@ -116,14 +117,15 @@
 }
 
 .customers thead {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color:rgb(230,230,235);
-  color:black;
-  font-family: 'Ramabhadra', sans-serif;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgb(230,230,235);
+    color:black;
+    font-family: 'Ramabhadra', sans-serif;
     border-bottom: solid .5px lightgray;
 }
+
 thead {
     justify-content: space-evenly;
     width: 100%;
@@ -166,3 +168,8 @@ tbody tr{
     height:auto;
     display:inline-block;
 }
+
+
+//////////////////////////////
+
+

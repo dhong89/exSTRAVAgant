@@ -8,7 +8,7 @@
 }
 
 .main-logo-div{
-    padding-right: 850px;
+    padding-right: 700px;
 }
 
  .signup-button-login {
@@ -52,7 +52,7 @@
     height: 30px;
     width: 400px;
     height: 70px;
-    margin-left: 50px;
+    margin-left: 10px;
     font-size: 32px;
     
 }
@@ -65,7 +65,7 @@
     padding-top: 30px;
     width: 400px;
     height: 350px;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
 .divider{
@@ -107,6 +107,7 @@
 
 
 .session-submit{
+    margin-top: 15px;
     background-color:rgb(255, 72, 0);
     width: 120px;
     height: 20px;
@@ -119,6 +120,23 @@
 }
 
 .session-submit:hover{
+    box-shadow: 0 0 5px rgb(221, 227, 228);
+}
+
+.demo-submit{
+    margin-top: 15px;
+    background-color:rgb(255, 72, 0);
+    width: 200px;
+    height: 35px;
+    border-radius: 2px;
+    border: none black .5px;
+    font-weight: bold;
+    color: white;
+    font-size: 11px;
+    outline:none;
+}
+
+.demo-submit:hover{
     box-shadow: 0 0 5px rgb(221, 227, 228);
 }
 

@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user
 
+        this.demoLogin = this.demoLogin.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -32,6 +33,14 @@ class SessionForm extends React.Component {
             return <h1>Log In</h1> 
         }
     }
+    
+    demoLogin(e) {
+        e.preventDefault();
+        const user = { username: "demo_user", password: "password123" };
+
+        this.props.demoLogin(user)
+    }
+
 
     renderErrors() {
         return (
@@ -104,9 +113,12 @@ class SessionForm extends React.Component {
                                 </label>
 
                                 <br/>
-                                <br/>
         
                                 <input className="session-submit" type="submit" value='Log In' />
+                             
+                                <br/>
+                                <input className="demo-submit" type="submit" value='Demo User' onClick={this.demoLogin}/>
+
                             </form>
                         </div>
                     </div>
@@ -126,7 +138,7 @@ class SessionForm extends React.Component {
                         <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                     </div>
 
-                    <div className="login-button">
+                    <div className="login-button-8">
                         <Link to="/login">Login</Link>
                     </div>
 
@@ -149,6 +161,18 @@ class SessionForm extends React.Component {
                 </div>
 
                 <form className='signup-form' onSubmit={this.handleSubmit}>
+                    <label>
+                        <input
+                            className='email-form'
+                            type="text"
+                            placeholder="email"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                        />
+                    </label>
+
+                    <br />
+
                     <label>
                         <input
                             className='username-form'
@@ -197,17 +221,8 @@ class SessionForm extends React.Component {
 
                     <br />
 
-                    <label>
-                        <input
-                            className='email-form'
-                            type="text"
-                            placeholder="email"
-                            value={this.state.email}
-                            onChange={this.update('email')}
-                        />
-                    </label>
 
-                    <br />
+
 
                     <input className="session-submit" type="submit" value={this.props.formType} />
                 </form>

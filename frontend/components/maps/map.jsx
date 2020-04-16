@@ -9,13 +9,12 @@ class Map extends React.Component {
       
 
         this.addMarker = this.addMarker.bind(this);
-        // this.addPolyMarkers = this.addPolyMarkers.bind(this);
+        this.addPoints = this.addPoints.bind(this);
+        this.displayRoutes = this.displayRoutes.bind(this);
+   
     }
 
-    // componentDidUpdate(){
-    //     this.addPolyMarkers();
-    //     this.state.marker.setMap(this.map);
-    // }
+
 
     componentDidMount() {
  
@@ -38,70 +37,65 @@ class Map extends React.Component {
     }
 
     addMarker(){
-        if (!this.points.slice(0, this.points.length - 1).includes(this.points[this.points.length - 1])){
-            new google.maps.Marker({
-            position: this.points[this.points.length - 1],
-            map: this.map,
-            title: 'Hello World!'
-            });
+        // if (!this.points.slice(0, this.points.length - 1).includes(this.points[this.points.length - 1])){
+        //     new google.maps.Marker({
+        //     position: this.points[this.points.length - 1],
+        //     map: this.map,
+        //     title: 'Hello World!'
+        //     });
+        // }
+        const last = this.points[this.points.length - 1];
+        const position = {
+            lat: last.location.lat(),
+            lng: last.location.lng()
         }
+        // debugger
+        let marker = new google.maps.Marker({
+            position: position
+        });
+        
+        marker.setMap(this.map);
 
         //Below  filter function just removes duplicate 'clicks' on the map//
-        this.points = this.points.filter((point, index) => this.points.indexOf(point) === index)
+        // this.points = this.points.filter((point, index) => this.points.indexOf(point) === index)
     }
 
-//     addPolyMarkers(){
-//         new google.maps.Polyline({
-//             path: this.state.points,
-//             geodesic: true,
-//             strokeColor: '#FF0000',
-//             strokeOpacity: 1.0,
-//             strokeWeight: 2
-//         });
-//     }
+    addPoints(location){
+        // debugger
+        this.points.push({
+            location: location,
+            stopover: false
+        })
+    }
 
-// var flightPlanCoordinates = [
-//     { lat: 37.772, lng: -122.214 },
-//     { lat: 21.291, lng: -157.821 },
-//     { lat: -18.142, lng: 178.431 },
-//     { lat: -27.467, lng: 153.027 }
-// ];
-// var flightPath = new google.maps.Polyline({
-//     path: flightPlanCoordinates,
-//     geodesic: true,
-//     strokeColor: '#FF0000',
-//     strokeOpacity: 1.0,
-//     strokeWeight: 2
-// });
+    displayRoutes () {
+        let midPoints = this.points.slice(1, this.points.length)
+       
+        console.log(midPoints);
+       
+        this.directionsService.route({
+            origin: this.points[0].location,
+            waypoints: midPoints.map(mark => ({ location: mark.location })),
+            destination: this.points[this.points.length - 1].location,
+            travelMode: 'WALKING'
+        }, (response, status) => {
+            if (status == 'OK') {
+                this.directionsRenderer.setDirections(response);
 
-// flightPath.setMap(map);
+            }
+        })
+    }
 
     listenForClick(){
         this.map.addListener('click', (e) => {
-            this.points.push(e.latLng);
+            this.addPoints(e.latLng);
             this.addMarker();
-            console.log(this.points)
-            this.directionsService.route({
-                origin: this.points[0],
-                destination: this.points[this.points.length - 1],
-                travelMode: 'WALKING'
-            }, (response, status) => {
-                if (status == 'OK'){
-                   this.directionsRenderer.setDirections(response);
-       
-                }
-            })
-
+            this.displayRoutes();
         })
     }
 
 
 
-    // {
-    // origin: LatLng | String | google.maps.Place,
-    //     destination: LatLng | String | google.maps.Place,
-    //         travelMode: TravelMode
-    // }
 
     render() {
         return (
@@ -114,4 +108,3 @@ class Map extends React.Component {
 
 export default Map;
 
-// document.getElementsByClassName(names)

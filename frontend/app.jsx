@@ -23,9 +23,7 @@ const App = () => (
         <ProtectedRoute path='/routes/show' component={RouteShowContainer} /> 
         <ProtectedRoute exact path='/workouts' component={WorkoutIndexContainer} /> 
         <ProtectedRoute exact path='/workouts/new' component={NewWorkoutContainer} /> 
-
-
-        <Route path='/map' component={MapContainer} />
+        <ProtectedRoute exact path='/map' component={MapContainer} />
      </div>
 );
 

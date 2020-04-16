@@ -34,11 +34,11 @@ class HomePage extends React.Component {
 
             <header className='header'>
 
-                <div className='main-logo-div'>
+                <div className='main-logo-div-9'>
                     <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
                 </div>
                 
-                <div className="login-button">
+                <div className="login-button-9">
                     <Link to="/login">Login</Link>
                 </div>
 

@@ -10,9 +10,11 @@ class RouteIndexItem extends React.Component {
         const {route} = this.props
         return (
 
-            <div className="main-container">
+            <div className="main-container-routes">
 
                 <h1 className='route-header'>My Routes</h1>
+
+                <Link to={'/map'}>Create New Route</Link>
 
                 <div className='route-container'>
                     <button onClick={() => this.props.deleteRoute(route.id)}>X</button>

@@ -110,6 +110,7 @@ Manual workout entries can be created to track a user's progress.
 <br/>
 <br/>
 
+___
 
 ### Future Implementations
 - Improve map interaction by adding edit, undo and clear routes functionality.

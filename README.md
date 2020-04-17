@@ -1,3 +1,6 @@
+<br/>
+<br/>
+
 <p align="center">
    <img src='app/assets/images/main_logo_orange.png' width='300'/>
 </p>

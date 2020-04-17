@@ -53,19 +53,15 @@ addMarker(){
             lng: last.location.lng()
         }
      
-   
         this.marker = new google.maps.Marker({
             position: position
         });
         
         this.marker.setMap(this.map);
-
     }
 
     displayRoutes () {
         let midPoints = this.points.slice(1, this.points.length)
-       
-        console.log(midPoints);
        
         this.directionsService.route({
             origin: this.points[0].location,

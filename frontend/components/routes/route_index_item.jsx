@@ -8,24 +8,30 @@ class RouteIndexItem extends React.Component {
 
     render () {
         const {route} = this.props
+    
         return (
 
             <div className="main-container-routes">
 
-                <h1 className='route-header'>My Routes</h1>
 
-                <Link to={'/map'}>Create New Route</Link>
+
 
                 <div className='route-container'>
-                    <button onClick={() => this.props.deleteRoute(route.id)}>X</button>
+                    <button className='x-btn' onClick={() => this.props.deleteRoute(route.id)}>X</button>
 
                     
                     <h1 className="route-name">
                         <Link to={`/api/routes/${route.id}`}>{route.route_name}</Link>
                     </h1>
 
+                        <img src={route.image_url}  alt='broke_image' />
+
                     <div>
-                        {route.distance}
+                       Distance: {route.distance} miles
+                    </div>
+
+                    <div>
+                        Elevation: {route.elevation} feet
                     </div>
 
 

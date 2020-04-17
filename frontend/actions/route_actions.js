@@ -32,7 +32,7 @@ export const fetchRoute = () => dispatch => {
 }
 
 export const createRoute = (route) => dispatch => {
-    APIUtil.createRoute(route)
+    return APIUtil.createRoute(route)
         .then( (route) => dispatch(receiveRoute(route)))
 }
 

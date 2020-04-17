@@ -18,7 +18,7 @@ export const createRoute = (route) => (
         method: 'POST',
         data: {route: route}
     })
-) //// Was not working on console.
+) 
 
 export const deleteRoute = (routeId) => (
     $.ajax({

@@ -9,6 +9,7 @@
 
 User.delete_all
 Route.delete_all
+Workout.delete_all
 
 
 
@@ -43,93 +44,85 @@ u3 = User.create!(
 
 
 Route.create!(
-    route_name: 'short run',
+    route_name: 'Morning run',
     distance: 3.14,
     elevation: 300,
-    coordinates: '40.8509, 73.9701',
     estimated_move_time: '0:23',
-    athlete_id: u1.id,
-    transportation: 'RUNNING'
+    athlete_id: u3.id,
+    transportation: 'RUNNING',
+    image_url: "https://maps.googleapis.com/maps/api/staticmap?size=300x180&markers=label:S%7C40.73525,-73.99413000000001&markers=label:E%7C40.73523,-73.99401&path=color:0x0000ff80|weight:2|enc:ibswFh~rbMuGgEaC_BAFH]`A}ClAwDFOxBvAzBvARJvB`BNLuC~I&key=AIzaSyBukEF_3yOYk6AJV3F8PlGze__SamMtBfA"
 )
 
 Route.create!(
-    route_name: 'long run',
+    route_name: 'Stress run',
     distance: 9.2,
     elevation: 230,
-    coordinates: '40.8215, 73.9876',
     estimated_move_time: '1:23',
-    athlete_id: u2.id,
-    transportation: 'RUNNING'
+    athlete_id: u3.id,
+    transportation: 'RUNNING',
+    image_url: "https://maps.googleapis.com/maps/api/staticmap?size=300x180&markers=label:S%7C40.733990000000006,-73.99504&markers=label:E%7C40.733700000000006,-73.99537000000001&path=color:0x0000ff80|weight:2|enc:mzrwF~csbMsDcCwEwCgGaEeFkDwBuAgJcG}GsEyBwAiEqCiGaEmCeB{BwAqBsAKIENyBuA_BeA~AdAxBtAb@ZvA`AoCrIc@tAa@pAw@bCeCxHmChIuClJ}A~E_EnMzHdFpD`CbC`BlHvE`Ap@ENeF`Pk@dBOd@Ne@j@eBbC~AhCfBtBnAtBtAjEtC~@l@pAz@\\gA`BeFp@oBNs@`BaFhDkKRo@vA`AhCdB`@VfAp@~@g@`Ae@pDoBx@a@hB{@b@Wj@a@PC@GRm@pEsNvBxAfElC`@XHOtBuGz@kCpAwD_GyDe@]&key=AIzaSyBukEF_3yOYk6AJV3F8PlGze__SamMtBfA"
 )
 
 Route.create!(
-    route_name: 'boring run',
+    route_name: 'Walk around town',
     distance: 7.2,
     elevation: 180,
-    coordinates: '40.8215, 73.9876',
     estimated_move_time: '1:23',
-    athlete_id: u2.id,
-    transportation: 'RUNNING'
-)
-
-Route.create!(
-    route_name: 'fun run',
-    distance: 5.14,
-    elevation: 150,
-    coordinates: '40.8343, 74.0088',
-    estimated_move_time: '0:33',
     athlete_id: u3.id,
-    transportation: 'RUNNING'
+    transportation: 'RUNNING',
+    image_url: "https://maps.googleapis.com/maps/api/staticmap?size=300x180&markers=label:S%7C40.734570000000005,-73.99461000000001&markers=label:E%7C40.73588,-73.99734000000001&path=color:0x0000ff80|weight:2|enc:a~rwFhasbMeHoEcC_BaCaBgFkDwBsAsE{C~AdAnDcLrAeEDO?@HWcFeD`GeRDOpBlArBtAhFjD|BzAxBrA|B~A|DcMBICHcC_BsFoDyMuIyBwAAFkCjIyArEmFrPyAtEs@tByApEiB~FgB~FeAbDQh@\\TRNNHEP`An@vA~@TRJFELs@zBwAnEsAnEdBjAPJbFdDjFjD`CzApGjEnBpAbA}CzCqJr@{B&key=AIzaSyBukEF_3yOYk6AJV3F8PlGze__SamMtBfA"
 )
 
 
+
 Workout.create!(
-    workout_name: 'Morning Walk',
-    date: Date.new(2020, 4, 1),
-    time:  Time.now,
-    sport: 'RUNNING',
     title: 'Morning Walk',
-    distance: '3.5', 
+    date: '4/13/20',
+    time:  '7:00AM',
+    sport: 'Run',
+    description: 'Walk before work',
+    distance: '3.5',
+    user_id: u3.id
+)
+
+Workout.create!(
+    title: 'Just a stroll',
+    date: '3/1/20',
+    time:  '6:00PM',
+    sport: 'Run',
+    description: 'Stroll',
+    distance: '1.5',
+    user_id: u3.id
+)
+
+Workout.create!(
+    title: 'Fast run',
+    date: '1/13/20',
+    time:  '9:00AM',
+    sport: 'Run',
+    description: 'Up tempo run',
+    distance: '7.5',
+    user_id: u3.id
+)
+
+Workout.create!(
+    title: 'Afternoon run',
+    date: '2/13/20',
+    time:  '2:00PM',
+    sport: 'Run',
+    description: 'Run after lunch',
+    distance: '5.5',
     user_id: u1.id
 )
 
 Workout.create!(
-    workout_name: 'Morning Run',
-    date: Date.new(2020, 4, 2),
-    time:  Time.now,
-    sport: 'RUNNING',
-    title: 'Morning Run',
-    distance: '7.8', 
-    user_id: u1.id
-)
-Workout.create!(    
-    workout_name: 'Morning Walk',
-    date: Date.new(2020, 4, 1),
-    time:  Time.now,
-    sport: 'RUNNING',
-    title: 'Morning Walk',
-    distance: '3.5', 
+    title: 'Evening Walk',
+    date: '4/16/20',
+    time:  '9:00PM',
+    sport: 'Run',
+    description: 'Walk before bed',
+    distance: '0.5',
     user_id: u2.id
-)
-
-Workout.create!(
-    workout_name: 'Afternoon Walk',
-    date: Date.new(2020, 4, 1),
-    time:  Time.now,
-    sport: 'RUNNING',
-    title: 'Morning Walk',
-    distance: '2.3', 
-    user_id: u3.id
-)
-
-Workout.create!(
-    workout_name: 'Evening Run',
-    date: Date.new(2020, 4, 1),
-    time:  Time.now,
-    sport: 'RUNNING',
-    title: 'Morning Walk',
-    distance: '5.7', 
-    user_id: u3.id
 )
 
 

@@ -1,0 +1,68 @@
+.route-header{
+    font-family: 'Ramabhadra', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 800px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+
+
+.routes-container{
+    padding-left: 300px;
+    width: 200px;
+}
+
+.routes-second-nav{
+    // margin-left: 20px;
+    display: inline-flex;
+    
+}
+
+.create-route-link{
+    display: inline-flex;
+    margin-bottom: 30px;
+}
+
+.x-btn{
+   float: right;
+  
+}
+
+.route-name a {
+    color:black;
+}
+
+
+
+.create-route-link{
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 5px;
+    border: solid lightgray .5px;
+    padding: 0px 30px 30px 30px;
+    width: 100px;
+    height: 1px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    background-color:rgb(223, 72, 0);
+    margin-top: 5px;
+}
+
+.create-route-link a {
+    color:white;
+    padding-top: 2px;
+}
+
+.route-items{
+    font-family: 'Ramabhadra', sans-serif;
+    display: inline-flex;
+    
+ 
+}
+
+.route-container{
+    display: block;
+    padding-right: 40px;
+}

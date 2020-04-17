@@ -44,7 +44,7 @@ A location is pinned whenever a user clicks on the map. Based on the pinned loca
 <br/>
 <br/>
 
-```
+```Javascript
 addMarker(){
 
         const last = this.points[this.points.length - 1];

@@ -27,6 +27,26 @@
 
 
 
+
+.error-messages-2 li{
+    height: 30px;
+    padding-left: 20px;
+    text-align: center;
+    display: flex;
+    font-family: 'Ramabhadra', sans-serif;
+    background: rgba(0, 0, 0, 0.7);
+    color: red;
+    list-style-type: circle
+}
+
+.error-messages-2 ul{
+    width: 400px;
+    font-size: 12px;
+ 
+}
+
+
+
 .main-body{
     display: block;
     align-items: center;
@@ -183,16 +203,6 @@
 
 
 
-.error-messages-2 li{
-    padding-left: 20px;
-    text-align: center;
-    display: flex;
-    font-family: 'Ramabhadra', sans-serif;
-    background: rgba(0, 0, 0, 0.7);
-    color: red;
-    font-size: 5px;
-    list-style-type: circle
-}
 
 .login-button-8{
     font-family: 'Ramabhadra', sans-serif;

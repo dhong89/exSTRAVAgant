@@ -26,14 +26,16 @@ class RouteIndexItem extends React.Component {
 
                         <img src={route.image_url}  alt='broke_image' />
 
-                    <div>
+
+                    <div className='route-distance'>
                        Distance: {route.distance} miles
                     </div>
 
-                    <div>
+                    <div className='route-elevation'>
                         Elevation: {route.elevation} feet
                     </div>
 
+                   
 
                 </div>
             </div>

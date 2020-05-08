@@ -66,7 +66,6 @@ class Map extends React.Component {
         });
     }
 
-
     addMarker(){
 
         const last = this.points[this.points.length - 1];
@@ -82,14 +81,6 @@ class Map extends React.Component {
         
         this.marker.setMap(this.map);
 
-    }
-
-    addPoints(location){
-  
-        this.points.push({
-            location: location,
-            stopover: false
-        })
     }
 
     displayRoutes () {
@@ -123,13 +114,13 @@ class Map extends React.Component {
         document.getElementsByClassName('total-distance').innerHTML = total + ' mi';
     }
 
-    // clearRoute(){
-    //     this.points = [];
-    //     this.directionsRenderer.setMap(null);
-    //     this.marker.setMap(null);
-    
-    // }
+    addPoints(location) {
 
+        this.points.push({
+            location: location,
+            stopover: false
+        })
+    }
 
     listenForClick(){
         this.map.addListener('click', (e) => {
@@ -139,6 +130,12 @@ class Map extends React.Component {
         })
     }
 
+    // clearRoute(){
+    //     this.points = [];
+    //     this.directionsRenderer.setMap(null);
+    //     this.marker.setMap(null);
+
+    // }
 
 
 

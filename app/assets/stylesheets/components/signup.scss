@@ -25,9 +25,6 @@
 
 }
 
-
-
-
 .error-messages-2 li{
     height: 30px;
     padding-left: 20px;
@@ -44,8 +41,6 @@
     font-size: 12px;
  
 }
-
-
 
 .main-body{
     display: block;
@@ -117,7 +112,6 @@
     background-color:rgb( 8, 11, 12);
     font-size: 15px;
     margin-bottom: 10px;
-
 }
 
 .password-form:focus{
@@ -136,15 +130,11 @@
     font-size: 15px;
     margin-bottom: 10px;
     color: white !important;
-
-
 }
 
 .first-name-form:focus{
     box-shadow: 0 0 5px rgb(221, 227, 228);
 }
-
-
 
 .last-name-form{
     border-radius: 1px;
@@ -176,14 +166,11 @@
     font-size: 15px;
     margin-bottom: 10px;
     color: white !important;
-
 }
 
 .email-form:focus{
     box-shadow: 0 0 5px rgb(221, 227, 228);
 }
-
-
 
 .session-submit{
     background-color:rgb(255, 72, 0);
@@ -201,9 +188,6 @@
     box-shadow: 0 0 5px rgb(221, 227, 228);
 }
 
-
-
-
 .login-button-8{
     font-family: 'Ramabhadra', sans-serif;
     border-radius: 2px;
@@ -214,7 +198,8 @@
     font-size: 12px;
     font-weight: bold;
     text-align: center;
-    margin-left: 700px;
+    margin-left: auto;
+    margin-right: 15%;
  }
 
  .login-button-8 a {

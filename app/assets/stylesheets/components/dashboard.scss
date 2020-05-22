@@ -1,7 +1,7 @@
 .profile-body-container{
     display: inline-flex;
     padding-top: 20px;
-     ;
+    margin: auto;
 }
 
 .profile-picture{
@@ -30,16 +30,15 @@
     border-radius: 5px;
 }
 
-
-
 .user-profile-container{
-    padding-left: 30px;
-    padding-right: 300px;
+    // padding-left: 30px;
+    margin-right: 20vw;
 }
 
 .dashboard {
-    width: 800px;
-    height: 200px;
+    // width: 800px;
+    // height: 200px;
+    width: 100%;
 }
 
 .log-out-btn-dash{
@@ -55,6 +54,8 @@
     background-color: rgb(245,245,250);
     white-space: nowrap;
     color:black;
+    margin-left: auto;
+    margin-right: 15%;
 }
 
 
@@ -87,12 +88,16 @@
 //     padding-right: 200px;
 // }
 
+.main-dashboard-body{
+    margin: auto;
+    width: 40vw;
+}
+
 .customers-1 {
     border-collapse: collapse;
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
- 
 }
 
 .customers-1 td, .customers thead {
@@ -113,19 +118,21 @@
     border: solid .5px lightgray;
 }
 
+.customers-1 tbody th{
+    padding-top: 12px;
+    font-size: 12px;
+}
+
 thead {
     justify-content: space-evenly;
     width: 100%;
     border-color: black;
 }
 
-
-
 .height-div-1 th{
     height: 40px;
     text-align: left;
 }
-
 
 tbody tr{
     font-family: 'Open Sans Condensed', sans-serif;

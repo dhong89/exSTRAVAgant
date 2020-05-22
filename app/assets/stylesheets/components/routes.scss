@@ -7,8 +7,6 @@
     margin-top: 20px;
 }
 
-
-
 .routes-container{
     padding-left: 300px;
     width: 200px;
@@ -27,14 +25,11 @@
 
 .x-btn{
    float: right;
-  
 }
 
-.route-name a {
-    color:black;
-}
-
-
+// .route-name a {
+//     color:black;
+// }
 
 .create-route-link{
     font-family: 'Ramabhadra', sans-serif;
@@ -57,9 +52,9 @@
 
 .route-items{
     font-family: 'Ramabhadra', sans-serif;
-    display: inline-flex;
-    
- 
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
 }
 
 .route-container{

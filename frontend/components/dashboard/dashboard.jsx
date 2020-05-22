@@ -47,7 +47,7 @@ class DashBoard extends React.Component {
             <>
             <div className='navbar'>
                 <div className='main-logo-div-dash'>
-                    <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
+                        <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link>
                 </div>
 
 

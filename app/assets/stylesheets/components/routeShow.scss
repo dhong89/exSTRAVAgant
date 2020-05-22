@@ -1,0 +1,63 @@
+.route-show-main-container{
+    margin: auto;
+    width: 50vw;
+    margin-top: 2vw;
+}
+
+.route-show-name{
+    font-size: 30px;
+    font-family: 'Ramabhadra', sans-serif;
+    margin-bottom: 2vw;
+}
+
+.route-show-1{
+    display: flex;
+}
+
+.image-container img{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    font-family: 'Ramabhadra', sans-serif;
+}
+
+.stats-container{
+    display:block;
+    font-family: 'Ramabhadra', sans-serif;
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+.stats-one{
+    display: flex;
+}
+
+.stats-one section{
+    margin-right: 5vw;
+    padding-bottom: 10px;
+}
+
+.stats-one h3 {
+    font-size: 9px;
+    color: grey;
+}
+
+.stats-two{
+    width: 10vw;
+}
+
+.stats-two h3 {
+    font-size: 15px;
+    color: grey;
+    margin-right: 1vw;;
+}
+
+.stats-two section{
+    display: flex;
+    // padding-right: 15vw;
+}
+
+
+
+
+

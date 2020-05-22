@@ -5,10 +5,8 @@ class Api::RoutesController < ApplicationController
         # @routes = current_user.routes
 
         if params[:current_user_route]
-           
             @routes = current_user.routes
         else
-           
             @routes = Route.all
         end
         
@@ -24,7 +22,7 @@ class Api::RoutesController < ApplicationController
 
     def create
         @route = Route.new(route_params)
-# debugger
+
         if @route.save
             render :show
         else

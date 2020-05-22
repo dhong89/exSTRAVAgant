@@ -1,4 +1,3 @@
-// import { Map, GoogleApiWrapper } from 'google-maps-react';
 import React from 'react';
 import { Link } from 'react-router-dom';3
 
@@ -36,7 +35,8 @@ class Map extends React.Component {
  
         const mapOptions = {
             center: { lat: 40.734902, lng: -73.991006 }, 
-            zoom: 17
+            zoom: 17,
+    
         };
 
         // this.evelationService = new google.maps.ElevationService();
@@ -46,7 +46,7 @@ class Map extends React.Component {
             map: this.map
         });
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.directionsRenderer.setMap(this.map)
+        // this.directionsRenderer.setMap(this.map)
         
         this.listenForClick();
         this.listenForDirectionsChanged();
@@ -73,20 +73,18 @@ class Map extends React.Component {
             lat: last.location.lat(),
             lng: last.location.lng()
         }
-     
    
         this.marker = new google.maps.Marker({
             position: position
         });
         
         this.marker.setMap(this.map);
+        this.displayRoutes();
 
     }
 
     displayRoutes () {
         let midPoints = this.points.slice(1, this.points.length)
-       
-        console.log(midPoints);
        
         this.directionsService.route({
             origin: this.points[0].location,
@@ -191,7 +189,6 @@ class Map extends React.Component {
                         <span className='exit-builder-link'>
                             <Link to={'/routes'}>Exit Builder</Link>
                         </span>
-
                     </div>
 
                     <form onSubmit={this.handleSubmit}>
@@ -212,12 +209,11 @@ class Map extends React.Component {
 
                     </form>
 
-                        
-
+                    
                     <div className='map-render' ref={map => this.mapNode = map}> 
                     </div>
 
-                <div className='total-distance'></div>
+                    <div className='total-distance'></div>
                 </>
         );
     }

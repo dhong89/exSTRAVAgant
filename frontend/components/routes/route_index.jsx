@@ -7,8 +7,6 @@ import RouteIndexItem from './route_index_item';
 class RouteIndex extends React.Component {
     constructor(props){
         super(props);
-        
- 
     }
 
     componentDidMount(){
@@ -28,33 +26,24 @@ class RouteIndex extends React.Component {
             
         return (
             <>
+                <div className='navbar-container'>
+                    <div className='navbar'>
+                        <div className='main-logo-div-workout'>
+                                <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link>
+                        </div>
 
-            <div className='navbar'>
-                <div className='main-logo-div-workout'>
-                    <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
-                </div>
+                        <div className='link-backs'>
+                                <Link to={'/dashboard'}>Dashboard</Link>
+                            
+                                <Link to={'/routes'}>Routes</Link>
+                          
+                                <Link to={'/workouts'}>Workouts</Link>
+                        </div>
 
+                        <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
 
-                <div className='link-backs'>
-                    <div className='dashboard-link'>
-                        <Link to={'/dashboard'}>Dashboard</Link>
-                    </div>
-
-                    <div className='dashboard-link'>
-                        <Link to={'/routes'}>Routes</Link>
-                    </div>
-
-                    <div className='workout-link'>
-                        <Link to={'/workouts'}>Workouts</Link>
                     </div>
                 </div>
-
-
-                <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
-
-                    {/* <img src="{`https://maps.googleapis.com/maps/api/staticmap?size = 400x400& center=40.737102,-73.990318 & zoom=11 & path=color:0x0000ff|weight:5|40.737102,-73.990318|40.749825,-73.987963|40.752946,-73.987384|40.755823,-73.986397 & key=${Rails.application.credentials.MAPS_API_KEY}`}" alt=""/> */}
-
-            </div>
 
                 <div className='routes-container'>
 

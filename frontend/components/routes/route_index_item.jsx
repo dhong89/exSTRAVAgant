@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RouteShowContainer from './route_show_container';
 
 class RouteIndexItem extends React.Component {
     constructor(props){
@@ -21,7 +22,8 @@ class RouteIndexItem extends React.Component {
 
                     
                     <h1 className="route-name">
-                        <Link to={`/api/routes/${route.id}`}>{route.route_name}</Link>
+                        {/* <RouteShowContainer routeId={route.id}/> */}
+                        <Link to={`/routes/${route.id}`}> {route.route_name}</Link>
                     </h1>
 
                         <img src={route.image_url}  alt='broke_image' />

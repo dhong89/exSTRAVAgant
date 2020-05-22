@@ -29,7 +29,7 @@ class WorkoutIndex extends React.Component {
             <div>
                 <div className='navbar'>
                     <div className='main-logo-div-workout'>
-                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
+                        <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link>
                     </div>
 
                     

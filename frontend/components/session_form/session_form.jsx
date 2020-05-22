@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                 <header className='header'>
 
                     <div className='main-logo-div'>
-                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
+                        <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link>
                     </div>
 
                     <div className="signup-button-login">
@@ -135,7 +135,7 @@ class SessionForm extends React.Component {
                 <header className='header'>
 
                     <div className='main-logo-div-signup'>
-                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
+                        <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link> 
                     </div>
 
                     <div className="login-button-8">

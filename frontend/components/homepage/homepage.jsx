@@ -35,14 +35,13 @@ class HomePage extends React.Component {
             <header className='header'>
 
                 <div className='main-logo-div-9'>
-                    <img className='main-logo-9' src={window.main_logo_orange} alt="main-logo" />
+                        <Link to="/"><img className='main-logo' src={window.main_logo_orange} alt="main-logo" /></Link>
                 </div>
                 
                 <div className="login-button-9">
                     <Link to="/login">Login</Link>
                 </div>
 
-  
             </header>
 
             <div className='main-container'>
@@ -51,10 +50,7 @@ class HomePage extends React.Component {
 
 
             <div className='col col-2-3'>
-
-                <img className='homepage-logo' src={window.logo} alt="logo" />
-
-
+                    <Link to="/"> <img className='homepage-logo' src={window.logo} alt="logo" /> </Link>
             </div>
 
 
@@ -62,10 +58,10 @@ class HomePage extends React.Component {
                 <div className='buttons-container'>
                 
                     <div className='demo-user-btn'>
-                            <Link  to="/login">Sign in using a Demo User</Link>
+                        <Link  to="/login">Sign in using a Demo User</Link>
                     </div>
 
-                        <div className="divider" /> 
+                    <div className="divider" /> 
 
                     <div className='sign-up-container'>
                         <img className='email-logo' src={window.email} alt="email" />
@@ -74,20 +70,11 @@ class HomePage extends React.Component {
                              <Link to="/signup">Sign up using email</Link>
                         </div>
                     </div>
-                            <div className="divider" /> 
 
-                        <p className='terms-conditions'>
-                            By signing up for Strava, you agree to the Terms of Service. View our Privacy Policy. 
-                        </p>
-
-
-
-                            <div className="divider" /> 
-
-                    <label className='login-redirect'>Already a member?
-                        <Link to="/login">Log in</Link>
-                    </label>
-
+                        <div className="divider" /> 
+                            
+                        <span className='login-redirect'>Already a member? <Link to="/login">Log in</Link></span>
+                        
                 </div>
             </div>
 
@@ -96,23 +83,12 @@ class HomePage extends React.Component {
                     <div className='main-logo-div-white'>
                         <img className='main-logo' src={window.main_logo_white} alt="main-logo" />
                     </div>
-
             </div>
-
-
-           
         </div>
-
-
-
     )
 
     return sessionPage();
     }
 }
-
-
-
-
 
 export default HomePage;

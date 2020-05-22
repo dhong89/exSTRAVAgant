@@ -10,7 +10,6 @@
     // margin-bottom: 20px;
     padding-bottom: 20px;
     width: 100%
-
 }
 
 .input-new-route{
@@ -28,14 +27,15 @@
     margin: 0 auto;
 }
 
-
 .route-builder{
     font-family: 'Ramabhadra', sans-serif;
     padding-right: 100px;
 }
 
 .exit-builder-link{
-   margin-left: 1050px;
+    position: absolute;
+    right: 20%; 
+   
 }
 
 .exit-builder-link a {

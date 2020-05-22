@@ -7,11 +7,7 @@
     object-position:50% 50%;
 }
 
-.main-logo-div{
-    padding-right: 700px;
-}
-
- .signup-button-login {
+.signup-button-login {
     font-family: 'Ramabhadra', sans-serif;
     border-radius: 4px;
     border: solid lightgray .5px;
@@ -19,18 +15,14 @@
     width: 50px;
     height: 25px;
     font-size: 11px;
-    
-
+    margin-left: auto;
+    margin-right: 15%;
     background-color:rgb(228, 77, 14);
 }
 
 .signup-button-login a {
-
     color: white;
-
 }
-
-
 
 .login-container{
     display: block;

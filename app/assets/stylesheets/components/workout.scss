@@ -1,7 +1,7 @@
 .main-logo{
     width: 200px;
     height: 30px;
-    padding-left: 300px;
+    right: 30%;
     padding-right: 80px;
     margin: 0 auto;
 }
@@ -24,39 +24,36 @@
     text-align: center;
     background-color: rgb(245,245,250);
     white-space: nowrap;
-    color:black
+    color:black;
+    margin-left: auto;
+    margin-right: 15%;
 }
 
 .navbar{
     display: flex;
-    width: 100%;
+    width: 78vw;
+    margin: auto;
     padding-top: 15px;
 }
 
 .link-backs{
     font-family: 'Open Sans Condensed', sans-serif;
     display: inline-flex; 
+    margin: auto;
+    justify-content: space-between;
+    width: 25vw;
 }
 
 .link-backs a {
     color: black;
-    font-size: 14px;
+    font-size: 14px; 
 }
 
 .link-backs a:hover {
     background-color:rgb(245,245,250);
 }
 
-.link-backs .dashboard-link{
-    padding-right: 100px;
-    padding-top: 5px;
-   
-}
 
-.link-backs .workout-link{
-    padding-right: 528px;
-    padding-top: 5px;
-}
 
 
 .new-workout-link{

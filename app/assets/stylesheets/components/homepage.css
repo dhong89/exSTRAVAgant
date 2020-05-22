@@ -6,19 +6,28 @@
     
 }
 
-.main-logo-div-9{
-    padding-left: 45px;
-}
-
 .main-logo-9{
-    padding-left: 350px;
-    padding-right: 200px;
+    margin-right: auto;
     width: 166px;
 }
 
-/* .main-logo-div-white{
-    display
-} */
+.login-button-9{
+    font-family: 'Ramabhadra', sans-serif;
+    border-radius: 2px;
+    border: solid lightgray .5px;
+    padding: 0 10px 10px 10px;
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 15%;
+ }
+
+.login-button-9 a {
+     color: black
+ }
 
 .buttons-container{
     padding-bottom: 10px;
@@ -53,24 +62,7 @@
     padding-top: 10px;
 }
 
- .login-button-9{
-    font-family: 'Ramabhadra', sans-serif;
-    border-radius: 2px;
-    border: solid lightgray .5px;
-    padding: 0 10px 10px 10px;
-    width: 50px;
-    height: 15px;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 600px;
- }
-
- .login-button-9 a {
-     color: black
- }
-
- .login-signin{
+.login-signin{
      display: inline-block;
 }
 
@@ -80,16 +72,13 @@
     text-align: center;
     margin: auto;
     padding: 50px 0px 50px 0px;
-    
-
 }
     
 .homepage-logo{
     display: inline-block;
     width: 500px;
     height: 500px;
-    padding-bottom: 80px;
-        
+    padding-bottom: 80px;      
 }
 
 .buttons-container {
@@ -110,21 +99,10 @@
     text-align: center;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif3;
-
 }
     
 .demo-user-btn a {
     color: black;
-}
-
-
-.terms-conditions{
-    display: flex;
-    width: 290px;
-    text-align: center;
-    font-size: 13px;
-    justify-content: left;
-    padding-left: 16px;
 }
 
 .login-redirect{
@@ -143,7 +121,6 @@
     color: white;
     font-size: 10px;
     text-align: justify;
-    /* padding-left: 5x; */
     padding-top: 40px;
     font-family: 'Ramabhadra', sans-serif;
 }

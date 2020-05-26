@@ -57,7 +57,7 @@ class HomePage extends React.Component {
             <div className="col col-1-3">
                 <div className='buttons-container'>
 
-                    <div className='demo-user-btn'>
+                    <div className='about-me'>
 
                         <a href="https://dhong89.github.io/" target='blank'>
                             <i class="fab fa-chrome"></i>

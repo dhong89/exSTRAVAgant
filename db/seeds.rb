@@ -64,7 +64,7 @@ Route.create!(
 )
 
 Route.create!(
-    route_name: 'Walk around town',
+    route_name: 'Quick Walk',
     distance: 7.2,
     elevation: 180,
     estimated_move_time: '1:23',
@@ -77,7 +77,7 @@ Route.create!(
 
 Workout.create!(
     title: 'Morning Walk',
-    date: '4/13/20',
+    date: '2019-12-26',
     time:  '7:00AM',
     sport: 'Run',
     description: 'Walk before work',
@@ -87,7 +87,7 @@ Workout.create!(
 
 Workout.create!(
     title: 'Just a stroll',
-    date: '3/1/20',
+    date: '2020-01-21',
     time:  '6:00PM',
     sport: 'Run',
     description: 'Stroll',
@@ -97,7 +97,7 @@ Workout.create!(
 
 Workout.create!(
     title: 'Fast run',
-    date: '1/13/20',
+    date: '	2020-01-26',
     time:  '9:00AM',
     sport: 'Run',
     description: 'Up tempo run',
@@ -107,7 +107,7 @@ Workout.create!(
 
 Workout.create!(
     title: 'Afternoon run',
-    date: '2/13/20',
+    date: '	2020-02-26',
     time:  '2:00PM',
     sport: 'Run',
     description: 'Run after lunch',
@@ -117,7 +117,7 @@ Workout.create!(
 
 Workout.create!(
     title: 'Evening Walk',
-    date: '4/16/20',
+    date: '	2020-03-26',
     time:  '9:00PM',
     sport: 'Run',
     description: 'Walk before bed',

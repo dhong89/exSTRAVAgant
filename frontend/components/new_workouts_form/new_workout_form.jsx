@@ -54,7 +54,7 @@ class NewWorkoutForm extends React.Component{
         this.dSec = "00";
 
         this.state = {
-            title: "My Run",
+            title: "",
             date: this.dateStr,
             time: this.timeStr,
             sport: "Run",
@@ -72,9 +72,8 @@ class NewWorkoutForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
             this.props.createWorkout({
-                title: "My Run",
+                title: this.state.title,
                 date: this.state.date,
                 time: this.state.time,
                 sport: "Run",
@@ -252,6 +251,7 @@ class NewWorkoutForm extends React.Component{
                                 className="workout-input-sport"
                                 onChange={this.update('title')}
                                 type="text"
+                                placeholder="My Run"
                                 value={this.state.title}>
                             </input>
                         </div>

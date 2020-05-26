@@ -24,7 +24,7 @@ class DashBoard extends React.Component {
                         <th>Name</th>
                         <th>Distance</th>
                         <th>Elevation</th>
-                        <th>Estimated Move Time</th>
+                        <th>Est Move Time</th>
                         <th>Sport</th>
                     </tr>
 
@@ -80,32 +80,33 @@ class DashBoard extends React.Component {
                         <div className='user-profile'>
                     
                             <span className='welcome-message'>
-                                    Welcome back, {this.props.users[this.props.currentUser].username}!
+                                {this.props.users[this.props.currentUser].username}
                             </span> 
                             
                         </div>
                     </div>
-
-
 
                     <div className='main-dashboard-body'>
                         <div className='dashboard-banner'>
                             <img className='dashboard' src={window.dashboard_banner} alt="dashboard" />
                         </div>
 
+
                         <div className='height-div-1'>
                             <table className="customers-1">
 
                                         {allRoutes}
 
-                             
-                              
                             </table>
                         </div>
 
                     </div>
                 </div>    
                 </div>
+
+
+
+
             </>
         )
     }

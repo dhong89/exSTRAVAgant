@@ -47,13 +47,9 @@ class WorkoutIndex extends React.Component {
                     </div>
                 </div>
                    
-                   
                     <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
                     
-                
-                
                 </div>
-
 
                 <div className='workout-nav'>
                     
@@ -76,13 +72,11 @@ class WorkoutIndex extends React.Component {
 
                             <thead>
                                     <tr>
-
                                             <th>Sport</th>
                                             <th>Title</th>
                                             <th>Date</th>
                                             <th>Time</th>
-                                            <th>Distance</th>
-                                             
+                                            <th>Distance</th>                                  
                                     </tr>
                             </thead>
                    
@@ -103,7 +97,7 @@ class WorkoutIndex extends React.Component {
                         <img className='main-logo' src={window.main_logo_white} alt="main-logo" />
                     </div>
                     <div className='divider'></div>
-                    <div className='copyright'>© 2020 exSTRAVAgant</div>
+                   
                 </div>
 
             </div>

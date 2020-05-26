@@ -56,6 +56,23 @@ class HomePage extends React.Component {
 
             <div className="col col-1-3">
                 <div className='buttons-container'>
+
+                    <div className='demo-user-btn'>
+
+                        <a href="https://dhong89.github.io/" target='blank'>
+                            <i class="fab fa-chrome"></i>
+                        </a>
+                        <a href="https://github.com/dhong89/exSTRAVAgant" target='blank'>
+                            <i className="fab fa-github-square" ></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/david-hong-53a8b768/" target='blank'>
+                            <i className="fab fa-linkedin" ></i>
+                        </a>
+                        <a href="https://angel.co/u/david-hong-32" target='blank'>
+                            <i class="fab fa-angellist"></i>
+                        </a>
+                    </div>
                 
                     <div className='demo-user-btn'>
                         <Link  to="/login">Sign in using a Demo User</Link>

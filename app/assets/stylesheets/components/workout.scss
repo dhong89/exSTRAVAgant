@@ -9,7 +9,7 @@
 .workout-nav{
     display: inline-flex;
     padding-top: 50px;
-    align-content: center;
+    
 }
 
 .log-out-btn{
@@ -53,9 +53,6 @@
     background-color:rgb(245,245,250);
 }
 
-
-
-
 .new-workout-link{
     font-family: 'Ramabhadra', sans-serif;
     border-radius: 5px;
@@ -88,22 +85,20 @@
     display: block;
     width: 100%;
     text-align: left;
-    padding-left: 300px;
+    padding-left: 15vw;
     font-weight: bolder;
     font-size: 30px;
-    padding-right: 931px;
+    padding-right: 50vw;
 }
 
 .workout-list-container{
   padding-left: 280px;
   padding-top: 50px;
-
 }
 
 .customers {
     border-collapse: collapse;
     width: 80%;
- 
 }
 
 .customers td, .customers thead {
@@ -134,7 +129,6 @@ thead {
 .height-div th{
     height: 40px;
     text-align: left;
-   
 }
 
 
@@ -144,8 +138,6 @@ tbody tr{
     padding-top: 10px;
     border-bottom: solid .5px lightgray;
 }
-
-
 
 .workout-footer{
     position: fixed;
@@ -166,8 +158,5 @@ tbody tr{
     height:auto;
     display:inline-block;
 }
-
-
-//////////////////////////////
 
 

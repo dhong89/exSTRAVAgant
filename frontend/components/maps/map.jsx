@@ -46,7 +46,7 @@ class Map extends React.Component {
             map: this.map
         });
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        // this.directionsRenderer.setMap(this.map)
+        this.directionsRenderer.setMap(this.map)
         
         this.listenForClick();
         this.listenForDirectionsChanged();

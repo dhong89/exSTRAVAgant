@@ -126,8 +126,9 @@
     display: flex;
     width: 340px;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     justify-content: center;
+    /* font-family: Arial, Helvetica, sans-serif3; */
 }
 
 .footer{

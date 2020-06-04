@@ -57,7 +57,7 @@ class NewWorkoutForm extends React.Component{
             title: "",
             date: this.dateStr,
             time: this.timeStr,
-            sport: "Run",
+            sport: "",
             description: "",
             distance: ''         
         }
@@ -72,214 +72,209 @@ class NewWorkoutForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-            this.props.createWorkout({
+            this.props
+              .createWorkout({
                 title: this.state.title,
                 date: this.state.date,
                 time: this.state.time,
-                sport: "Run",
+                sport: this.state.sport,
                 description: this.state.description,
                 distance: this.state.distance,
-                user_id: this.props.session.id
-            }).then( (result) => this.props.history.push("/workouts"));
+                user_id: this.props.session.id,
+              })
+              .then((result) => this.props.history.push("/workouts"));
     }
 
     render () {
 
         return (
-            <div>
+          <div>
+            <div className="navbar">
+              <div className="main-logo-div">
+                <img
+                  className="main-logo"
+                  src={window.main_logo_orange}
+                  alt="main-logo"
+                />
+              </div>
 
-                <div className='navbar'>
-                    <div className='main-logo-div'>
-                        <img className='main-logo' src={window.main_logo_orange} alt="main-logo" />
-                    </div>
-
-
-                    <div className='link-backs'>
-                        <div className='dashboard-link'>
-                            <Link to={'/dashboard'}>Dashboard</Link>
-                        </div>
-
-                        <div className='dashboard-link'>
-                            <Link to={'/routes'}>Routes</Link>
-                        </div>
-
-                        <div className='workout-link'>
-                            <Link to={'/workouts'}>Workouts</Link>
-                        </div>
-                    </div>
-
-                    <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
+              <div className="link-backs">
+                <div className="dashboard-link">
+                  <Link to={"/dashboard"}>Dashboard</Link>
                 </div>
 
-               <h1 className='workout-header'>New Workout</h1>
+                <div className="dashboard-link">
+                  <Link to={"/routes"}>Routes</Link>
+                </div>
 
-                <div></div>
+                <div className="workout-link">
+                  <Link to={"/workouts"}>Workouts</Link>
+                </div>
+              </div>
 
-                <form className='form-container' onSubmit={this.handleSubmit}>
-                   <div className='first-section'>
-                    <div className='distance-container'>
-                        <label>
-                            Distance
-                            <br />
-                             
-                            <input
-                                className='workout-input'
-                                type='text'
-                                value={this.state.distance}
-                                onChange={this.update('distance')}
-                            />
-
-                            <input
-                                className="place-holders"
-                                type="text"
-                                value="Miles"
-                                readOnly>
-                            </input>
-
-                        </label>
-
-                    </div>
-           
-
-                    <div className="duration-container">
-                        <label>Duration
-                                <br />
-                                <div className='divider'></div>
-                        <div className='duration-flex'>
-                            
-                            <div className="duration-hour-container">
-                                <input
-                                    className="duration-hour"
-                                    onChange={this.update("dHour")}
-                                    type="text"
-                                    placeholder='hr'
-                                    value={this.state.dHour || ''}
-                                    />
-   
-                            </div>
-
-                            <div className="duration-min-container">
-                                <input
-                                    className="duration-min"
-                                    onChange={this.update("dMin")}
-                                    type="text"
-                                    placeholder='min'
-                                    value={this.state.dMin || ''}
-                                />
-
-                            </div>
-
-                            <div className="duration-sec-container">
-                                <input
-                                    className="duration-sec"
-                                    onChange={this.update("dSec")}
-                                    type="text"
-                                    placeholder='sec'
-                                    value={this.state.dSec || ""}
-                                />
-
-                            </div>
-                        </div>
-
-                        </label>
-                    </div>
-
-
-                    <div className='elevation-container'>
-                        <label>Elevation
-                            <div className="elevation-div" >
-                                <input
-                                    className='workout-input'
-                                    onChange={this.update("elevation")}
-                                    type="text"
-                                    value={this.state.elevation || ''}
-                                />
-
-                                <input
-                                    className="place-holders"
-                                    type="text"
-                                    value="feet"
-                                    readOnly>
-                                </input>
-                            </div>
-                        </label>
-                    </div>
-                    </div>
-
-                    <hr />
-
-                    <div className='second-section'>
-
-                       
-                        <div className="workout-sport-container">
-                            
-                            <label>Sport</label>
-                            <br />
-                            <input
-                                className="workout-input-sport"
-                                onChange={this.update('sport')}
-                                type="text"
-                                value={this.state.sport}>
-                            </input>
-                        </div>
-
-                        <div className="workout-date-time-container">
-                            <label>Date & Time</label>
-                            <br />
-                            <input
-                                className="workout-input"
-                                onChange={this.update('dateStr')}
-                                type="date"
-                                value={this.state.dateStr|| ''}>
-                            </input>
-                            <input
-                                className="workout-input"
-                                onChange={this.update('timeStr')}
-                                type="text"
-                                placeholder={this.timeStr}
-                                value={this.state.timeStr}>
-                            </input>
-                        </div>
-                    </div>
-
-
-                    <div>
-                        <div className="title-container">
-                            <label>Title</label>
-                            <br />
-                            <input
-                                className="workout-input-sport"
-                                onChange={this.update('title')}
-                                type="text"
-                                placeholder="My Run"
-                                value={this.state.title}>
-                            </input>
-                        </div>
-                    </div>
-
-                 
-
-                    <hr />
-
-                    <div>
-                        <div className="description-container">
-                            <label>Description</label>
-                            <br />
-                            <textarea
-                                className="description-text"
-                                onChange={this.update('description')}
-                                value={this.state.description ||''}
-                                placeholder="How did it go? Were you tired or rested? How was the weather?"></textarea>
-                        </div>
-                    </div>
-
-                    <div>
-                        <button className="workout-btn-save">Create</button>
-                    </div>
-                    
-                </form>
+              <button
+                className="log-out-btn"
+                onClick={() => this.props.logout()}
+              >
+                Log Out
+              </button>
             </div>
-        )
+
+            <h1 className="workout-header">New Workout</h1>
+
+            <div></div>
+
+            <form className="form-container" onSubmit={this.handleSubmit}>
+              <div className="first-section">
+                <div className="distance-container">
+                  <label>
+                    Distance
+                    <br />
+                    <input
+                      className="workout-input"
+                      type="text"
+                      value={this.state.distance}
+                      onChange={this.update("distance")}
+                    />
+                    <input
+                      className="place-holders"
+                      type="text"
+                      value="Miles"
+                      readOnly
+                    ></input>
+                  </label>
+                </div>
+
+                <div className="duration-container">
+                  <label>
+                    Duration
+                    <br />
+                    <div className="divider"></div>
+                    <div className="duration-flex">
+                      <div className="duration-hour-container">
+                        <input
+                          className="duration-hour"
+                          onChange={this.update("dHour")}
+                          type="text"
+                          placeholder="hr"
+                          value={this.state.dHour || ""}
+                        />
+                      </div>
+
+                      <div className="duration-min-container">
+                        <input
+                          className="duration-min"
+                          onChange={this.update("dMin")}
+                          type="text"
+                          placeholder="min"
+                          value={this.state.dMin || ""}
+                        />
+                      </div>
+
+                      <div className="duration-sec-container">
+                        <input
+                          className="duration-sec"
+                          onChange={this.update("dSec")}
+                          type="text"
+                          placeholder="sec"
+                          value={this.state.dSec || ""}
+                        />
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <div className="elevation-container">
+                  <label>
+                    Elevation
+                    <div className="elevation-div">
+                      <input
+                        className="workout-input"
+                        onChange={this.update("elevation")}
+                        type="text"
+                        value={this.state.elevation || ""}
+                      />
+
+                      <input
+                        className="place-holders"
+                        type="text"
+                        value="feet"
+                        readOnly
+                      ></input>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <hr />
+
+              <div className="second-section">
+                <div className="workout-sport-container">
+                  <label>Sport</label>
+                  <br />
+                  <input
+                    className="workout-input-sport"
+                    onChange={this.update("sport")}
+                    type="text"
+                    placeholder="Run"
+                    value={this.state.sport}
+                  ></input>
+                </div>
+
+                <div className="workout-date-time-container">
+                  <label>Date & Time</label>
+                  <br />
+                  <input
+                    className="workout-input"
+                    onChange={this.update("dateStr")}
+                    type="date"
+                    value={this.state.dateStr || ""}
+                  ></input>
+                  <input
+                    className="workout-input"
+                    onChange={this.update("timeStr")}
+                    type="text"
+                    placeholder={this.timeStr}
+                    value={this.state.timeStr}
+                  ></input>
+                </div>
+              </div>
+
+              <div>
+                <div className="title-container">
+                  <label>Title</label>
+                  <br />
+                  <input
+                    className="workout-input-sport"
+                    onChange={this.update("title")}
+                    type="text"
+                    placeholder="My Run"
+                    value={this.state.title}
+                  ></input>
+                </div>
+              </div>
+
+              <hr />
+
+              <div>
+                <div className="description-container">
+                  <label>Description</label>
+                  <br />
+                  <textarea
+                    className="description-text"
+                    onChange={this.update("description")}
+                    value={this.state.description || ""}
+                    placeholder="How did it go? Were you tired or rested? How was the weather?"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div>
+                <button className="workout-btn-save">Create</button>
+              </div>
+            </form>
+          </div>
+        );
     }
 }
 

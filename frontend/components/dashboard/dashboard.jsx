@@ -31,7 +31,7 @@ class DashBoard extends React.Component {
                 </thead>
                 <tbody>
                     <tr>
-                        <th>{route.route_name}</th>
+                        <th><Link to={`/routes/${route.id}`}> {route.route_name}</Link></th>
                         <th>{route.distance}</th>
                         <th>{route.elevation}</th>
                         <th>{route.estimated_move_time}</th>
@@ -90,7 +90,6 @@ class DashBoard extends React.Component {
 
             <div className='background-container'>
                 <div className='profile-body-container'>
-
                     <div className='user-profile-container'>
 
                         <div className='profile-picture'>

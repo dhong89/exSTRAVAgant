@@ -1,5 +1,5 @@
 class Workout < ApplicationRecord
-    validates :date, :time, :sport, :description, :distance, presence: true
+    validates :date, :time, :sport, :description, :distance, :title, presence: true
 
     belongs_to :user,
         primary_key: :id,

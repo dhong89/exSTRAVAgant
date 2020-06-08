@@ -12,7 +12,6 @@ class Api::WorkoutsController < ApplicationController
     
     def create
         @workout = Workout.new(workout_params)
-
         if @workout.save
             render 'api/workouts/show'
         else

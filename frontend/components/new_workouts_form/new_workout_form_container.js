@@ -4,9 +4,10 @@ import { createWorkout, fetchWorkout } from '../../actions/workout_actions';
 import { logout } from '../../actions/session_actions';
 
 
-const mstp = (state) => {
-    return state;
-}
+const mstp = (state) =>({
+    session: state.session,
+    errors: state.errors.workout
+})
 
 const mdtp = dispatch => {
     return ({

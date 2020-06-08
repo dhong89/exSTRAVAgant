@@ -48,7 +48,23 @@ class WorkoutIndex extends React.Component {
                 </div>
                    
                     <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
-                    
+                {/* <div className='dash-about-me'>
+
+                    <a href="https://dhong89.github.io/" target='blank'>
+                        <i class="fab fa-chrome"></i>
+                    </a>
+                    <a href="https://github.com/dhong89/exSTRAVAgant" target='blank'>
+                        <i className="fab fa-github-square" ></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/david-hong-53a8b768/" target='blank'>
+                        <i className="fab fa-linkedin" ></i>
+                    </a>
+                    <a href="https://angel.co/u/david-hong-32" target='blank'>
+                        <i class="fab fa-angellist"></i>
+                    </a>
+                </div> */}
+
                 </div>
 
                 <div className='workout-nav'>

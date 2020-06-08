@@ -51,7 +51,7 @@ class RouteShow extends React.Component{
                   </button>
 
 
-                  {/* <div className='dash-about-me'>
+                  <div className='dash-about-me'>
 
                     <a href="https://dhong89.github.io/" target='blank'>
                       <i class="fab fa-chrome"></i>
@@ -66,7 +66,7 @@ class RouteShow extends React.Component{
                     <a href="https://angel.co/u/david-hong-32" target='blank'>
                       <i class="fab fa-angellist"></i>
                     </a>
-                  </div> */}
+                  </div>
                 </div>
 
                 <div className='route-show-main-container'>

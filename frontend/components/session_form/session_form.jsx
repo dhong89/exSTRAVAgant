@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
 
     this.demoLogin = this.demoLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLoginHelper = this.demoLoginHelper.bind(this);
   }
 
   componentDidMount() {
@@ -43,43 +42,11 @@ class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     const user = { username: "demo_user", password: "password123" };
-    const userNameArray = user.username.split("");
-    const passwordArray = user.password.split("");
+  
 
-    this.setState({ username: "", password: "" }, () => {
-      this.demoLoginHelper(userNameArray, passwordArray);
-    });
+    this.props.demoLogin(user);
   }
 
-  demoLoginHelper(userNameArray, passwordArray) {
-    if (userNameArray.length > 0) {
-      this.setState(
-        {
-          username: this.state.username + userNameArray.shift(),
-        },
-        () => {
-          window.setTimeout(
-            () => this.demoLoginHelper(userNameArray, passwordArray),
-            75
-          );
-        }
-      );
-    } else if (passwordArray.length > 0) {
-      this.setState(
-        {
-          password: this.state.password + passwordArray.shift(),
-        },
-        () => {
-          window.setTimeout(
-            () => this.demoLoginHelper(userNameArray, passwordArray),
-            75
-          );
-        }
-      );
-    } else {
-      this.props.demoLogin(this.state);
-    }
-  }
 
   renderErrors() {
     return (

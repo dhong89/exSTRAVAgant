@@ -48,7 +48,7 @@ class WorkoutIndex extends React.Component {
                 </div>
                    
                     <button className='log-out-btn' onClick={() => this.props.logout()}>Log Out</button>
-                {/* <div className='dash-about-me'>
+                <div className='dash-about-me'>
 
                     <a href="https://dhong89.github.io/" target='blank'>
                         <i class="fab fa-chrome"></i>
@@ -63,7 +63,7 @@ class WorkoutIndex extends React.Component {
                     <a href="https://angel.co/u/david-hong-32" target='blank'>
                         <i class="fab fa-angellist"></i>
                     </a>
-                </div> */}
+                </div>
 
                 </div>
 

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         delete window.currentUser;
     } else {
         store = configureStore();
-    } 
+    }
 
     
     const root = document.getElementById('root');

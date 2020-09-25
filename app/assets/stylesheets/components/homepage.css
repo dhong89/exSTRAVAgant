@@ -81,7 +81,7 @@
 }
 
 .buttons-container {
-    padding:200px 0px 80px 50px;
+    padding: 11vw 0px 80px 10vw;
 }
 
 .divider{
@@ -136,7 +136,7 @@
     bottom: 0;
     display: flex;
     background-color: rgb(36,36,40);
-    height: 100px;
+    height: 3vw;
     width: 100%;
     color: white;
     font-size: 10px;
